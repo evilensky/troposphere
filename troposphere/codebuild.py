@@ -234,6 +234,16 @@ class ProjectSourceVersion(AWSProperty):
     }
 
 
+class ScopeConfiguration(AWSProperty):
+    """
+    `ScopeConfiguration <http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html>`__
+    """
+
+    props: PropsDictType = {
+        "Name": (str, True),
+    }
+
+
 class ProjectTriggers(AWSProperty):
     """
     `ProjectTriggers <http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html>`__
@@ -242,6 +252,7 @@ class ProjectTriggers(AWSProperty):
     props: PropsDictType = {
         "BuildType": (str, False),
         "FilterGroups": (list, False),
+        "ScopeConfiguration": (ScopeConfiguration, False),
         "Webhook": (boolean, False),
     }
 

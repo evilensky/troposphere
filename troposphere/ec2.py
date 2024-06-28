@@ -280,6 +280,7 @@ class CustomerGateway(AWSObject):
 
     props: PropsDictType = {
         "BgpAsn": (integer, False),
+        "BgpAsnExtended": (double, False),
         "CertificateArn": (str, False),
         "DeviceName": (str, False),
         "IpAddress": (str, True),
@@ -2660,7 +2661,7 @@ class TransitGatewayRoute(AWSObject):
 
     props: PropsDictType = {
         "Blackhole": (boolean, False),
-        "DestinationCidrBlock": (str, False),
+        "DestinationCidrBlock": (str, True),
         "TransitGatewayAttachmentId": (str, False),
         "TransitGatewayRouteTableId": (str, True),
     }
